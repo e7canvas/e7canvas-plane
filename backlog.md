@@ -2,4 +2,4 @@
 
 ## Agusto 24 ##
 
-- [ ] Open #1 Setup project
+- [x] #1 Setup project
