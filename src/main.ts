@@ -1,24 +1,17 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import { Plane } from './plane'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+const canvasContainer : HTMLDivElement = document.querySelector('#canvas-container')!
+const  canvas = document.querySelector<HTMLCanvasElement>('#canvas')!
+// set with and height of canvas same of container
+canvas.width = canvasContainer.clientWidth;
+canvas.height = canvasContainer.clientHeight;
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+const ctx = canvas.getContext('2d')!
+
+
+let p = new Plane(canvas.width/2, canvas.height/2);
+p.draw(ctx);
+
+
+
