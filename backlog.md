@@ -2,4 +2,4 @@
 
 ## Agusto 24 ##
 
-- [ ] **Tarea 1** - 2 horas
+- [ ] Open #1 Setup project
